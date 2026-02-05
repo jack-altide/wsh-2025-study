@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(*)",
+      "Write(notes/**)",
+      "Write(exercises/**)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(mkdir:*)"
+    ],
+    "deny": []
+  },
+  "env": {
+    "LEARNING_PROJECT": "wsh-2025-study",
+    "TARGET_REPO": "web-speed-hackathon-2025"
+  }
+}
