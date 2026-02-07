@@ -96,6 +96,55 @@ type PriorityTask = Task & WithPriority;
 | ジェネリクス | `<T>` | 汎用的な型パラメータ |
 | インターセクション型 | `A & B` | AかつB |
 
+### 7. async/await
+
+非同期処理を同期的に書ける構文。
+
+```typescript
+async function fetchData(): Promise<Data> {
+  const response = await fetch(url);  // 完了まで待つ
+  return response.json();
+}
+
+// 並列実行
+const [a, b] = await Promise.all([fetchA(), fetchB()]);
+```
+
+### 8. interface
+
+オブジェクトの形を定義。extendsで継承可能。
+
+```typescript
+interface Animal {
+  name: string;
+}
+
+interface Dog extends Animal {
+  breed: string;
+}
+```
+
+| 比較 | type | interface |
+|------|------|-----------|
+| オブジェクト定義 | ✓ | ✓ |
+| ユニオン型 | ✓ | ❌ |
+| 継承 | `&` | `extends` |
+| 同名宣言の合体 | ❌ | ✓ |
+
+### 9. ES Modules
+
+ファイル間で型や関数を共有。
+
+```typescript
+// export側
+export interface Task { ... }
+export default appName;
+
+// import側
+import { Task } from "./types";
+import appName from "./utils";
+```
+
 ## 参考リンク
 
 - [ut.code 学習ページ - TypeScript](https://learn.utcode.net/docs/advanced/typescript/)
