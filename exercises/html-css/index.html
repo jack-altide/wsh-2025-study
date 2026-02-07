@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>タスク管理アプリ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- Step 1: HTMLタグ基礎 -->
+  <!-- 使うタグ: div, h1, p, a, img, button, form, input -->
+  <!-- ============================================ -->
+
+  <div class="app">
+
+    <!-- ヘッダー -->
+    <div class="header">
+      <h1>Task Manager</h1>
+      <p>TypeScriptで作ったタスク管理アプリのUI版</p>
+      <a href="https://github.com/jack-altide/wsh-2025-study" target="_blank">GitHub</a>
+    </div>
+
+    <!-- タスク追加フォーム -->
+    <form class="task-form">
+      <input type="text" placeholder="新しいタスクを入力..." />
+      <button type="submit">追加</button>
+    </form>
+
+    <!-- タスク一覧 -->
+    <div class="task-list">
+
+      <div class="task-item done">
+        <p>TypeScriptを学ぶ</p>
+        <span class="badge">done</span>
+      </div>
+
+      <div class="task-item in-progress">
+        <p>Node.jsを学ぶ</p>
+        <span class="badge">in_progress</span>
+      </div>
+
+      <div class="task-item pending">
+        <p>Reactを学ぶ</p>
+        <span class="badge">pending</span>
+      </div>
+
+      <!-- ================================================ -->
+      <!-- 練習問題1: 以下にタスクを1つ追加してください       -->
+      <!-- タイトル: "HTML/CSSを学ぶ", ステータス: in-progress -->
+      <!-- 上のtask-itemを参考にしてください                  -->
+      <!-- ================================================ -->
+      <!-- ダッシュボード（Grid） -->
+  
+      <div class="task-item in-progress">
+        <p>"HTML/CSSを学ぶ"</p>
+        <span class="badge">in_progress</span>
+      </div>
+  <div class="dashboard">
+      <div class="stat-card">
+        <p class="stat-number">4</p>
+        <p class="stat-label">全タスク</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-number">1</p>
+      <p class="stat-label">完了</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-number">2</p>
+      <p class="stat-label">進行中</p>
+    </div>
+    <div class="stat-card">
+      <p class="stat-number">1</p>
+      <p class="stat-label">未着手</p>
+    </div>
+  </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
